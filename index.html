@@ -60,9 +60,9 @@
     padding:22px 0 18px;gap:12px 16px}
   .brand{display:flex;align-items:baseline;gap:11px}
   .brand__name{font-family:var(--display);font-weight:700;letter-spacing:-.01em;
-    font-size:20px;color:var(--text);position:relative;padding-bottom:7px}
+    font-size:20px;color:var(--text);position:relative;padding-bottom:9px}
   /* The mark from the plugin: a flat rule broken by a filter notch. */
-  .brand__notch{display:block;width:100%;height:9px;margin-top:-2px}
+  .brand__notch{position:absolute;left:0;bottom:0;width:100%;height:7px}
   .chip{font-family:var(--mono);font-size:12px;color:var(--violet-lit);text-decoration:none;
     border:1px solid rgba(180,120,255,.32);border-radius:999px;padding:6px 13px;letter-spacing:.04em;
     white-space:nowrap;transition:border-color .15s ease,color .15s ease}
@@ -73,12 +73,12 @@
   .hero__title{
     font-family:var(--display);font-weight:700;letter-spacing:-.035em;line-height:1.0;
     font-size:clamp(36px,10.4vw,112px);color:var(--text);margin:20px 0 0;
-    display:block;width:fit-content;max-width:100%;
+    display:block;width:fit-content;max-width:100%;position:relative;padding-bottom:.21em;
     text-shadow:0 4px 40px rgba(0,0,0,.45);
   }
   /* The silent p, dimmed — the pronunciation line under the wordmark explains it. */
   .hero__title .silent{color:#8a63b8;text-shadow:none}
-  .hero__notch{display:block;width:100%;height:auto;margin-top:.06em}
+  .hero__notch{position:absolute;left:0;bottom:0;width:100%;height:.21em}
   .hero__say{margin:18px 0 0;font-family:var(--mono);font-size:clamp(13px,1.7vw,15.5px);
     color:var(--violet-lit);letter-spacing:.04em}
   .hero__say .ipa{color:var(--muted);letter-spacing:.02em;white-space:nowrap}
@@ -250,8 +250,8 @@
   <header class="topbar">
     <div class="brand">
       <span class="brand__name">Parameptrix
-        <svg class="brand__notch" viewBox="0 0 160 9" fill="none" aria-hidden="true">
-          <path d="M0 2h74l7 5 7-5h72" stroke="#b478ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg class="brand__notch" viewBox="0 0 160 9" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path d="M0 2h99l7 5 7-5h47" stroke="#b478ff" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
         </svg>
       </span>
     </div>
@@ -262,9 +262,9 @@
     <section class="hero">
       <p class="eyebrow rise d1">Creative EQ · VST3 · CLAP · AU</p>
       <h1 class="hero__title rise d2">Parame<span class="silent">p</span>trix
-        <svg class="hero__notch" viewBox="0 0 640 24" fill="none" aria-hidden="true">
-          <path d="M0 6h304l23 14 23-14h290" stroke="#b478ff" stroke-width="4"
-                stroke-linecap="round" stroke-linejoin="round"/>
+        <svg class="hero__notch" viewBox="0 0 640 24" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path d="M0 6h401l23 14 23-14h193" stroke="#b478ff" stroke-width="4"
+                stroke-linecap="butt" stroke-linejoin="round"/>
         </svg>
       </h1>
       <p class="hero__say rise d2">“para-MET-rix” <span class="ipa">/ˌpærəˈmɛtrɪks/</span>
