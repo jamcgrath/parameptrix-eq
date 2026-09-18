@@ -16,7 +16,7 @@
     --void:#08060c;   --ink:#0c0910;    --panel:#141019;   --panel-2:#1a1422;
     --violet:#b478ff; --violet-lit:#c08eff; --violet-deep:#63428c;
     --curve:#eaf1fb;  --blue:#6fb7ff;
-    --text:#e7ebf1;   --muted:#9a90ab;   --label:#7d7389;
+    --text:#e7ebf1;   --muted:#9a90ab;   --label:#847a90;
     --hair:rgba(180,120,255,.15);
     --display:'Space Grotesk',system-ui,-apple-system,sans-serif;
     --body:'Inter',system-ui,-apple-system,sans-serif;
@@ -84,7 +84,7 @@
   .controls{display:grid;gap:12px;margin:26px 0 0;grid-template-columns:repeat(auto-fit,minmax(262px,1fr))}
   .control{background:linear-gradient(180deg,rgba(26,20,34,.78),rgba(12,9,16,.78));
     border:1px solid var(--hair);border-radius:12px;padding:16px 18px}
-  .control__name{font-family:var(--display);font-weight:600;font-size:16px;color:var(--text);
+  .control__name{margin:0;font-family:var(--display);font-weight:600;font-size:16px;color:var(--text);
     display:flex;align-items:baseline;justify-content:space-between;gap:10px}
   .control__vals{font-family:var(--mono);font-size:11.5px;font-weight:400;color:var(--violet-lit);
     letter-spacing:.02em;white-space:nowrap}
@@ -223,18 +223,18 @@
       <p class="eyebrow">The window</p>
       <h2 class="section__title">What's where.</h2>
       <div class="controls">
-        <div class="control"><div class="control__name">Header</div>
+        <div class="control"><h3 class="control__name">Header</h3>
           <p class="control__desc">The mode tabs (<code>Standard</code> / <code>Creative</code>), the A/B slots
             and the preset menu. The icon at the far right opens UI size and theme.</p></div>
-        <div class="control"><div class="control__name">Curve display</div>
+        <div class="control"><h3 class="control__name">Curve display</h3>
           <p class="control__desc">The frequency response from 20&nbsp;Hz to 20&nbsp;kHz, ±24&nbsp;dB, with a
             numbered handle for each active band drawn over the live spectrum analyzer.</p></div>
-        <div class="control"><div class="control__name">Detail strip</div>
+        <div class="control"><h3 class="control__name">Detail strip</h3>
           <p class="control__desc">The selected band's FREQ, GAIN, Q and TYPE as editable fields, plus any
             extra control that band's type happens to have.</p></div>
-        <div class="control"><div class="control__name">Band table</div>
+        <div class="control"><h3 class="control__name">Band table</h3>
           <p class="control__desc">All sixteen slots, 1–8 on the left and 9–16 on the right.</p></div>
-        <div class="control"><div class="control__name">Character panel</div>
+        <div class="control"><h3 class="control__name">Character panel</h3>
           <p class="control__desc">GLOBAL VARIANTS, SATURATION and CURVE, with the output gain and meter down
             the right-hand edge.</p></div>
       </div>
@@ -246,15 +246,15 @@
       <p class="section__sub">Four are on when you insert the plugin; the rest are off and waiting. At least
         one band must stay active — the last one can't be switched off.</p>
       <div class="controls">
-        <div class="control"><div class="control__name">Switching on or off</div>
+        <div class="control"><h3 class="control__name">Switching on or off</h3>
           <p class="control__desc">Click the numbered badge in the table. A band that's off shows
             <code>OFF</code> where its gain would be.</p></div>
-        <div class="control"><div class="control__name">Selecting</div>
+        <div class="control"><h3 class="control__name">Selecting</h3>
           <p class="control__desc">Click a row in the table, or a handle on the curve.</p></div>
-        <div class="control"><div class="control__name">Editing on the curve</div>
+        <div class="control"><h3 class="control__name">Editing on the curve</h3>
           <p class="control__desc">Drag a handle to set frequency and gain together. Hold <b>Alt</b> or
             <b>Cmd</b> while dragging to change that band's Q instead.</p></div>
-        <div class="control"><div class="control__name">Ranges <span class="control__vals">20 Hz – 20 kHz</span></div>
+        <div class="control"><h3 class="control__name">Ranges <span class="control__vals">20 Hz – 20 kHz</span></h3>
           <p class="control__desc">Gain ±24&nbsp;dB, Q from 0.1 to 18 — 0.707 is the neutral default.</p></div>
       </div>
 
@@ -314,15 +314,15 @@
       <p class="section__sub">Nothing here is destructive: put the knobs back and you have exactly the curve
         you built. <code>RESET</code> returns all four to neutral.</p>
       <div class="controls">
-        <div class="control"><div class="control__name">TUNE <span class="control__vals">±2 oct</span></div>
+        <div class="control"><h3 class="control__name">TUNE <span class="control__vals">±2 oct</span></h3>
           <p class="control__desc">Shifts the whole curve in frequency.</p></div>
-        <div class="control"><div class="control__name">DEPTH <span class="control__vals">−100 – 200 %</span></div>
+        <div class="control"><h3 class="control__name">DEPTH <span class="control__vals">−100 – 200 %</span></h3>
           <p class="control__desc">Scales every gain-using band's gain. 100&nbsp;% is unchanged, 200&nbsp;% is a
             caricature of the same shape, and <b>negative values mirror the curve</b> — every boost becomes a
             cut of the same size, which is a usable setting rather than a broken one.</p></div>
-        <div class="control"><div class="control__name">FOCUS <span class="control__vals">±2 oct of Q</span></div>
+        <div class="control"><h3 class="control__name">FOCUS <span class="control__vals">±2 oct of Q</span></h3>
           <p class="control__desc">Scales every band's Q. Left is broader, right is more resonant.</p></div>
-        <div class="control"><div class="control__name">SPAN <span class="control__vals">±1</span></div>
+        <div class="control"><h3 class="control__name">SPAN <span class="control__vals">±1</span></h3>
           <p class="control__desc">Stretches or compresses the curve about a 632&nbsp;Hz pivot, so the shape
             spreads out or gathers in around the middle.</p></div>
       </div>
@@ -338,15 +338,15 @@
         <div class="modecard"><b>Bite</b><span>Clipping rather than saturation, with a mid-forward voicing of its own.</span></div>
       </div>
       <div class="controls">
-        <div class="control"><div class="control__name">Zones <span class="control__vals">LOW · MID · HIGH</span></div>
+        <div class="control"><h3 class="control__name">Zones <span class="control__vals">LOW · MID · HIGH</span></h3>
           <p class="control__desc">Three crossover bands driven independently, or <code>GLOBAL</code> to drive
             the whole signal as one. The two are mutually exclusive — you either split the signal into zones or
             glue it as a whole. Press the pill under either side to switch to it.</p></div>
-        <div class="control"><div class="control__name">Drive <span class="control__vals">0 – 24 dB</span></div>
+        <div class="control"><h3 class="control__name">Drive <span class="control__vals">0 – 24 dB</span></h3>
           <p class="control__desc">Input into a fixed curve. 0&nbsp;dB is very nearly a wire.</p></div>
-        <div class="control"><div class="control__name">MIX</div>
+        <div class="control"><h3 class="control__name">MIX</h3>
           <p class="control__desc">The section's wet/dry, so you can blend saturation under the clean signal.</p></div>
-        <div class="control"><div class="control__name">Post EQ / Pre EQ</div>
+        <div class="control"><h3 class="control__name">Post EQ / Pre EQ</h3>
           <p class="control__desc">Where the stage sits relative to the bands. <code>Post EQ</code> is the
             default and the more useful: boost a band and it drives the saturator harder, which is how a
             console EQ behaves.</p></div>
@@ -380,12 +380,12 @@
         before fitting, the same way a vector tool tidies a path on release. The strip under the plot reports
         how many bands the fit used and how far it missed your drawing by, in dB.</p>
       <div class="controls">
-        <div class="control"><div class="control__name">UNDO / REDO</div>
+        <div class="control"><h3 class="control__name">UNDO / REDO</h3>
           <p class="control__desc">Step back and forward through strokes.</p></div>
-        <div class="control"><div class="control__name">RESET</div>
+        <div class="control"><h3 class="control__name">RESET</h3>
           <p class="control__desc">Clears the drawing back to flat. This is not the CURVE macros' RESET in the
             character panel; it's separated from undo on purpose, since it's the more destructive of the two.</p></div>
-        <div class="control"><div class="control__name">EDIT</div>
+        <div class="control"><h3 class="control__name">EDIT</h3>
           <p class="control__desc">Keep the fitted curve and go back to Standard to edit it as ordinary bands.
             If that wasn't what you wanted, <code>UNDO HAND-OFF</code> appears in Standard to take it back.</p></div>
       </div>
@@ -400,15 +400,15 @@
       <p class="eyebrow">Analyzer &amp; meter</p>
       <h2 class="section__title">Watching the signal.</h2>
       <div class="controls">
-        <div class="control"><div class="control__name">PRE / POST</div>
+        <div class="control"><h3 class="control__name">PRE / POST</h3>
           <p class="control__desc">Whether the spectrum shown is the signal arriving or the signal leaving.</p></div>
-        <div class="control"><div class="control__name">FREEZE</div>
+        <div class="control"><h3 class="control__name">FREEZE</h3>
           <p class="control__desc">Holds the displayed spectrum. Audio keeps flowing; only the picture stops.</p></div>
-        <div class="control"><div class="control__name">Meter <span class="control__vals">IN · OUT</span></div>
+        <div class="control"><h3 class="control__name">Meter <span class="control__vals">IN · OUT</span></h3>
           <p class="control__desc">Both readings side by side down the right-hand edge, with a hold marker at
             the recent peak and a numeric readout underneath. If the output clips, a latch lights across the
             top of the scale and stays lit until you click the meter to acknowledge it.</p></div>
-        <div class="control"><div class="control__name">GAIN <span class="control__vals">±12 dB</span></div>
+        <div class="control"><h3 class="control__name">GAIN <span class="control__vals">±12 dB</span></h3>
           <p class="control__desc">The output gain, applied last in the chain and smoothed so you can ride it
             while watching the meter.</p></div>
       </div>
